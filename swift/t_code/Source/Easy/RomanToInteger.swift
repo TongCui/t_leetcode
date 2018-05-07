@@ -56,9 +56,85 @@ import Foundation
 
 class RomanToInteger {
     class Solution {
+        
+        func getTwoCharWord(s: String, from: String.Index) -> String {
+            let end = s.index(from, offsetBy: 1)
+            return String(s[from...end])
+        }
+        
         func romanToInt(_ s: String) -> Int {
             
-            return 0
+            print(s)
+            
+            let count = s.count
+            var res = 0
+            var offset = 0
+            
+            while offset < count {
+                let index = s.index(s.startIndex, offsetBy: offset)
+                switch s[index] {
+                case "I":
+                    if offset < count - 1  {
+                        switch getTwoCharWord(s: s, from: index) {
+                        case "IV":
+                            res += 4
+                            offset += 1
+                        case "IX":
+                            res += 9
+                            offset += 1
+                        default:
+                            res += 1
+                        }
+                    } else {
+                        res += 1
+                    }
+                case "V":
+                    res += 5
+                case "X":
+                    if offset < count - 1  {
+                        switch getTwoCharWord(s: s, from: index) {
+                        case "XL":
+                            res += 40
+                            offset += 1
+                        case "XC":
+                            res += 90
+                            offset += 1
+                        default:
+                            res += 10
+                        }
+                    } else {
+                        res += 10
+                    }
+                case "L":
+                    res += 50
+                case "C":
+                    if offset < count - 1  {
+                        switch getTwoCharWord(s: s, from: index) {
+                        case "CD":
+                            res += 400
+                            offset += 1
+                        case "CM":
+                            res += 900
+                            offset += 1
+                        default:
+                            res += 100
+                        }
+                    } else {
+                        res += 100
+                    }
+                case "D":
+                    res += 500
+                case "M":
+                    res += 1000
+                default:
+                    fatalError()
+                }
+                
+                offset += 1
+            }
+            
+            
+            return res
         }
     }
 }

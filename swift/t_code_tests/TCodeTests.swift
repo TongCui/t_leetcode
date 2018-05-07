@@ -78,4 +78,11 @@ class TCodeTests: XCTestCase {
         let res = PalindromeNumber.Solution().isPalindrome(num)
         XCTAssertEqual(res, false)
     }
+    
+    func testRomanToInteger() {
+        let s = "MCMXCIV"
+        let res = RomanToInteger.Solution().romanToInt(s)
+        
+        XCTAssertEqual(res, 1994)
+    }
 }
