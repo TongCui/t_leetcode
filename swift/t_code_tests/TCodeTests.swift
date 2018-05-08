@@ -85,4 +85,136 @@ class TCodeTests: XCTestCase {
         
         XCTAssertEqual(res, 1994)
     }
+    
+    func testLongestCommonPrefix() {
+        let strs = ["flower","flow","flight"]
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix(strs)
+        
+        XCTAssertEqual(res, "fl")
+    }
+    
+    func testLongestCommonPrefix1() {
+        let strs = ["dog","racecar","car"]
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix(strs)
+        
+        XCTAssertEqual(res, "")
+    }
+    
+    func testLongestCommonPrefix2() {
+        let strs = [String]()
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix(strs)
+        
+        XCTAssertEqual(res, "")
+    }
+    
+    
+    func testLongestCommonPrefix3() {
+        let strs = ["ca","a"]
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix(strs)
+        
+        XCTAssertEqual(res, "")
+    }
+    
+    func testLongestCommonPrefixN() {
+        let strs = ["flower","flow","flight"]
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix2(strs)
+        
+        XCTAssertEqual(res, "fl")
+    }
+    
+    func testLongestCommonPrefixN1() {
+        let strs = ["dog","racecar","car"]
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix2(strs)
+        
+        XCTAssertEqual(res, "")
+    }
+    
+    func testLongestCommonPrefixN2() {
+        let strs = [String]()
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix2(strs)
+        
+        XCTAssertEqual(res, "")
+    }
+    
+    
+    func testLongestCommonPrefixN3() {
+        let strs = ["ca","a"]
+        let res = LongestCommonPrefix.Solution().longestCommonPrefix2(strs)
+        
+        XCTAssertEqual(res, "")
+    }
+    
+    func testValidParentheses() {
+        var str = ""
+        var res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, true)
+        
+        str = "()"
+        res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, true)
+        
+        str = "()[]{}"
+        res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, true)
+        
+        str = "(]"
+        res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, false)
+        
+        str = "([)]"
+        res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, false)
+        
+        str = "{[]}"
+        res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, true)
+        
+        str = "]["
+        res = ValidParentheses.Solution().isValid(str)
+        XCTAssertEqual(res, false)
+    }
+    
+    func testMergeTwoSortedLists() {
+        var node1: ListNode?
+        var node2: ListNode?
+        var res: ListNode?
+        
+        node1 = ListNode.node(string: "1->2->4")
+        node2 = ListNode.node(string: "1->3->4")
+        res = MergeTwoSortedLists.Solution().mergeTwoLists(node1, node2)
+        XCTAssertEqual(res?.description ?? "", "1->1->2->3->4->4")
+        
+        node1 = ListNode.node(string: "1->2->4")
+        node2 = ListNode.node(string: "")
+        res = MergeTwoSortedLists.Solution().mergeTwoLists(node1, node2)
+        XCTAssertEqual(res?.description ?? "", "1->2->4")
+        
+        node1 = ListNode.node(string: "1")
+        node2 = ListNode.node(string: "1->3->4")
+        res = MergeTwoSortedLists.Solution().mergeTwoLists(node1, node2)
+        XCTAssertEqual(res?.description ?? "", "1->1->3->4")
+        
+    }
+    
+    func testMergeTwoSortedLists1() {
+        var node1: ListNode?
+        var node2: ListNode?
+        var res: ListNode?
+        
+        node1 = ListNode.node(string: "1->2->4")
+        node2 = ListNode.node(string: "1->3->4")
+        res = MergeTwoSortedLists.Solution().mergeTwoLists1(node1, node2)
+        XCTAssertEqual(res?.description ?? "", "1->1->2->3->4->4")
+        
+        node1 = ListNode.node(string: "1->2->4")
+        node2 = ListNode.node(string: "")
+        res = MergeTwoSortedLists.Solution().mergeTwoLists1(node1, node2)
+        XCTAssertEqual(res?.description ?? "", "1->2->4")
+        
+        node1 = ListNode.node(string: "1")
+        node2 = ListNode.node(string: "1->3->4")
+        res = MergeTwoSortedLists.Solution().mergeTwoLists1(node1, node2)
+        XCTAssertEqual(res?.description ?? "", "1->1->3->4")
+        
+    }
 }
