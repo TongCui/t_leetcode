@@ -462,4 +462,75 @@ class TCodeTests: XCTestCase {
         res = ClimbingStairs.Solution().climbStairs(stairs)
         XCTAssertEqual(res, 3)
     }
+    
+    func testRemoveDuplicatesFromSortedList() {
+        var node: ListNode?
+        var res: ListNode?
+        
+        node = ListNode.node(string: "1->1->2")
+        res = RemoveDuplicatesFromSortedList.Solution().deleteDuplicates(node)
+        XCTAssertEqual(res?.description ?? "", "1->2")
+        
+        node = ListNode.node(string: "1->1->2->3->3")
+        res = RemoveDuplicatesFromSortedList.Solution().deleteDuplicates(node)
+        XCTAssertEqual(res?.description ?? "", "1->2->3")
+        
+        node = ListNode.node(string: "1")
+        res = RemoveDuplicatesFromSortedList.Solution().deleteDuplicates(node)
+        XCTAssertEqual(res?.description ?? "", "1")
+        
+        node = ListNode.node(string: "1->2->2->2")
+        res = RemoveDuplicatesFromSortedList.Solution().deleteDuplicates(node)
+        XCTAssertEqual(res?.description ?? "", "1->2")
+        
+        node = ListNode.node(string: "2->2->2->3")
+        res = RemoveDuplicatesFromSortedList.Solution().deleteDuplicates(node)
+        XCTAssertEqual(res?.description ?? "", "2->3")
+        
+        node = ListNode.node(string: "2->2->2->2")
+        res = RemoveDuplicatesFromSortedList.Solution().deleteDuplicates(node)
+        XCTAssertEqual(res?.description ?? "", "2")
+        
+    }
+    
+    func testMergeSortedArray() {
+        var array1: [Int]
+        var array2: [Int]
+        
+        array1 = [1,2,3,0,0,0]
+        array2 = [2,5,6]
+        MergeSortedArray.Solution().merge(&array1, 3, array2, 3)
+        XCTAssertEqual(array1, [1,2,2,3,5,6])
+        
+        
+        array1 = [5,5,6,0,0,0]
+        array2 = [2,5,6]
+        MergeSortedArray.Solution().merge(&array1, 3, array2, 3)
+        XCTAssertEqual(array1, [2,5,5,5,6,6])
+        
+        array1 = [2,2,2,0,0]
+        array2 = [1,2]
+        MergeSortedArray.Solution().merge(&array1, 3, array2, 2)
+        XCTAssertEqual(array1, [1,2,2,2,2])
+        
+        array1 = [2,2,2,0,0]
+        array2 = [1]
+        MergeSortedArray.Solution().merge(&array1, 3, array2, 1)
+        XCTAssertEqual(array1, [1,2,2,2,0])
+        
+    }
+    
+    func testSingleNumber() {
+        var nums: [Int]
+        var res: Int
+        
+        nums = [2,2,1]
+        res = SingleNumber.Solution().singleNumber(nums)
+        XCTAssertEqual(res, 1)
+        
+        nums = [4,1,2,1,2]
+        res = SingleNumber.Solution().singleNumber(nums)
+        XCTAssertEqual(res, 4)
+    }
+    
 }
