@@ -30,8 +30,32 @@ import Foundation
 class ConvertSortedArraytoBinarySearchTree {
     class Solution {
         func sortedArrayToBST(_ nums: [Int]) -> TreeNode? {
+            return sortedArrayToBST(nums, from: 0, to: nums.count - 1)
+        }
+        
+        func sortedArrayToBST(_ nums: [Int], from: Int, to: Int) -> TreeNode? {
+            guard nums.count > 0 && from <= to else {
+                return nil
+            }
             
-            return nil
+            let mid = from + (to - from) / 2
+            let node = TreeNode(nums[mid])
+            node.left = sortedArrayToBST(nums, from: from, to: mid - 1)
+            node.right = sortedArrayToBST(nums, from: mid + 1, to: to)
+            
+            return node
+        }
+        
+        func sortedArrayToBST1(_ nums: [Int]) -> TreeNode? {
+            guard !nums.isEmpty else {
+                return nil
+            }
+            
+            let mid = nums.count / 2
+            let node = TreeNode(nums[mid])
+            node.left = sortedArrayToBST1(Array(nums.prefix(upTo: mid)))
+            node.right = sortedArrayToBST1(Array(nums.suffix(from: mid + 1)))
+            return node
         }
     }
 }

@@ -533,4 +533,91 @@ class TCodeTests: XCTestCase {
         XCTAssertEqual(res, 4)
     }
     
+    func testConvertSortedArraytoBinarySearchTree() {
+        
+        let nums = [-10,-3,0,5,9]
+        let res = ConvertSortedArraytoBinarySearchTree.Solution().sortedArrayToBST(nums)
+        
+        XCTAssertNotNil(res)
+    }
+    
+    func testPascalsTriangle() {
+        var level: Int
+        var res: [[Int]]
+        
+        level = 1
+        res = PascalsTriangle.Solution().generate(level)
+        XCTAssertEqual(res, [[1]])
+        
+        level = 2
+        res = PascalsTriangle.Solution().generate(level)
+        XCTAssertEqual(res, [[1], [1,1]])
+        
+        level = 3
+        res = PascalsTriangle.Solution().generate(level)
+        XCTAssertEqual(res, [[1], [1,1], [1,2,1]])
+        
+        level = 4
+        res = PascalsTriangle.Solution().generate(level)
+        XCTAssertEqual(res, [[1], [1,1], [1,2,1], [1,3,3,1]])
+    }
+    
+    func testPascalsTriangleII() {
+        var level: Int
+        var res: [Int]
+        
+        level = 0
+        res = PascalsTriangleII.Solution().getRow(level)
+        XCTAssertEqual(res, [1])
+        
+        level = 1
+        res = PascalsTriangleII.Solution().getRow(level)
+        XCTAssertEqual(res, [1,1])
+        
+        level = 2
+        res = PascalsTriangleII.Solution().getRow(level)
+        XCTAssertEqual(res, [1,2,1])
+        
+        level = 3
+        res = PascalsTriangleII.Solution().getRow(level)
+        XCTAssertEqual(res, [1,3,3,1])
+        
+    }
+    
+    func testPascalsTriangleII1() {
+        var level: Int
+        var res: [Int]
+        
+        level = 0
+        res = PascalsTriangleII.Solution().getRow1(level)
+        XCTAssertEqual(res, [1])
+        
+        level = 1
+        res = PascalsTriangleII.Solution().getRow1(level)
+        XCTAssertEqual(res, [1,1])
+        
+        level = 2
+        res = PascalsTriangleII.Solution().getRow1(level)
+        XCTAssertEqual(res, [1,2,1])
+        
+        level = 3
+        res = PascalsTriangleII.Solution().getRow1(level)
+        XCTAssertEqual(res, [1,3,3,1])
+        
+    }
+    
+    
+    func testBestTimetoBuyandSellStock() {
+        var list: [Int]
+        var res: Int
+        
+        list = [7,1,5,3,6,4]
+        res = BestTimetoBuyandSellStock.Solution().maxProfit(list)
+        XCTAssertEqual(res, 5)
+        
+        list = [7,6,4,3,1]
+        res = BestTimetoBuyandSellStock.Solution().maxProfit(list)
+        XCTAssertEqual(res, 0)
+    }
+    
 }
