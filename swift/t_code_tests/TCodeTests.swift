@@ -620,4 +620,104 @@ class TCodeTests: XCTestCase {
         XCTAssertEqual(res, 0)
     }
     
+    func testBestTimetoBuyandSellStockII() {
+        var list: [Int]
+        var res: Int
+        
+        list = [7,1,5,3,6,4]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit(list)
+        XCTAssertEqual(res, 7)
+        
+        list = [1,2,3,4,5]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit(list)
+        XCTAssertEqual(res, 4)
+        
+        list = [7,6,4,3,1]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit(list)
+        XCTAssertEqual(res, 0)
+        
+        list = [7]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit(list)
+        XCTAssertEqual(res, 0)
+        
+        list = [0]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit(list)
+        XCTAssertEqual(res, 0)
+    }
+    
+    func testBestTimetoBuyandSellStockII1() {
+        var list: [Int]
+        var res: Int
+        
+        list = [7,1,5,3,6,4]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit1(list)
+        XCTAssertEqual(res, 7)
+        
+        list = [1,2,3,4,5]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit1(list)
+        XCTAssertEqual(res, 4)
+        
+        list = [7,6,4,3,1]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit1(list)
+        XCTAssertEqual(res, 0)
+        
+        list = [7]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit1(list)
+        XCTAssertEqual(res, 0)
+        
+        list = [0]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit1(list)
+        XCTAssertEqual(res, 0)
+    }
+    
+    func testBestTimetoBuyandSellStockII2() {
+        var list: [Int]
+        var res: Int
+        
+        list = [7,1,5,3,6,4]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit2(list)
+        XCTAssertEqual(res, 7)
+        
+        list = [1,2,3,4,5]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit2(list)
+        XCTAssertEqual(res, 4)
+        
+        list = [7,6,4,3,1]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit2(list)
+        XCTAssertEqual(res, 0)
+        
+        list = [7]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit2(list)
+        XCTAssertEqual(res, 0)
+        
+        list = [0]
+        res = BestTimetoBuyandSellStockII.Solution().maxProfit2(list)
+        XCTAssertEqual(res, 0)
+    }
+    
+    func testValidPalindrome() {
+        var string: String
+        var res: Bool
+        
+        string = "ab ba"
+        res = ValidPalindrome.Solution().isPalindrome(string)
+        XCTAssertEqual(res, true)
+        
+        string = "A man, a plan, a canal: Panama"
+        res = ValidPalindrome.Solution().isPalindrome(string)
+        XCTAssertEqual(res, true)
+        
+        string = "race a car"
+        res = ValidPalindrome.Solution().isPalindrome(string)
+        XCTAssertEqual(res, false)
+        
+        string = "ab b aa aaa"
+        res = ValidPalindrome.Solution().isPalindrome(string)
+        XCTAssertEqual(res, false)
+        
+        string = "a."
+        res = ValidPalindrome.Solution().isPalindrome(string)
+        XCTAssertEqual(res, true)
+    }
+    
 }

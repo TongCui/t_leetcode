@@ -34,18 +34,14 @@ class BestTimetoBuyandSellStock {
     
     class Solution {
         func maxProfit(_ prices: [Int]) -> Int {
-            guard prices.count >= 2  else {
-                return 0
-            }
-            
+            var buy = Int.max
             var res = 0
-            for i in (0..<(prices.count - 1)) {
-                for j in ((i+1)..<prices.count) {
-                    res = max(prices[j] - prices[i], res)
-                }
+            for price in prices {
+                res = max(res, price - buy)
+                buy = min(buy, price)
             }
             
-            return res
+            return res >= 0 ? res : 0
         }
     }
 }
