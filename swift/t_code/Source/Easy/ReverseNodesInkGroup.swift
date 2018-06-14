@@ -31,7 +31,11 @@ import Foundation
 class ReverseNodesInkGroup {
     class Solution {
         func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
-           return nil
+            guard head != nil else { return nil }
+            
+            return nil
         }
+        
+        
     }
 }

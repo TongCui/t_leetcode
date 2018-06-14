@@ -50,6 +50,7 @@
 		0703B44520A964580054627C /* ValidPalindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0703B44420A964580054627C /* ValidPalindrome.swift */; };
 		0703B44920A97A7A0054627C /* MergeKSortedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0703B44820A97A7A0054627C /* MergeKSortedLists.swift */; };
 		0703B44B20A98EB00054627C /* ReverseNodesInkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0703B44A20A98EB00054627C /* ReverseNodesInkGroup.swift */; };
+		0748249020D2466F00BFAF8A /* array-slice-min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748248F20D2466F00BFAF8A /* array-slice-min.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		0703B44420A964580054627C /* ValidPalindrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPalindrome.swift; sourceTree = "<group>"; };
 		0703B44820A97A7A0054627C /* MergeKSortedLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeKSortedLists.swift; sourceTree = "<group>"; };
 		0703B44A20A98EB00054627C /* ReverseNodesInkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseNodesInkGroup.swift; sourceTree = "<group>"; };
+		0748248F20D2466F00BFAF8A /* array-slice-min.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "array-slice-min.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				070003E920A3B5A300F3EFD1 /* RemoveDuplicatesFromSortedList.swift */,
 				070003EB20A3B9B200F3EFD1 /* MergeSortedArray.swift */,
 				0703B44820A97A7A0054627C /* MergeKSortedLists.swift */,
+				0748248F20D2466F00BFAF8A /* array-slice-min.swift */,
 				0703B44A20A98EB00054627C /* ReverseNodesInkGroup.swift */,
 				070003ED20A3BDC600F3EFD1 /* SameTree.swift */,
 				070003EF20A3BF3D00F3EFD1 /* SymmetricTree.swift */,
@@ -354,6 +357,7 @@
 				070003DE20A2D97300F3EFD1 /* LengthOfLastWord.swift in Sources */,
 				0703B44520A964580054627C /* ValidPalindrome.swift in Sources */,
 				0703B43520A449460054627C /* PathSum.swift in Sources */,
+				0748249020D2466F00BFAF8A /* array-slice-min.swift in Sources */,
 				0703B43920A5351C0054627C /* BalancedBinaryTree.swift in Sources */,
 				070003C420A0420500F3EFD1 /* TwoSum.swift in Sources */,
 				070003D120A2B9FA00F3EFD1 /* RemoveDuplicatesFromSortedArray.swift in Sources */,
