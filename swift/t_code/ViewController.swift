@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        test()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func test() {
+        let a = [[1], [1]]
+        let b = [[2], [2], [2]]
+        
+        zip(a, b).forEach { (left, right) in
+            print(left)
+            print(right)
+        }
     }
-
-
+    
+    
 }
 
