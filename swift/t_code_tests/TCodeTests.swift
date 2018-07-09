@@ -220,7 +220,7 @@ class TCodeTests: XCTestCase {
     func testRemoveDuplicatesFromSortedArray() {
         var nums: [Int]
         var res: Int
-            
+        
         nums = [1,1,2]
         res = RemoveDuplicatesFromSortedArray.Solution().removeDuplicates(&nums)
         XCTAssertEqual(res, 2)
@@ -720,4 +720,143 @@ class TCodeTests: XCTestCase {
         XCTAssertEqual(res, true)
     }
     
+    func testMedianOfTwoSortedArrays() {
+        var nums1 = [1,3]
+        var nums2 = [2]
+        
+        var solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 2.0)
+        
+        nums1 = [1,2]
+        nums2 = [3,4]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 2.5)
+        
+        nums1 = []
+        nums2 = [3,4]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 3.5)
+        
+        nums1 = [1,2,3]
+        nums2 = []
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 2)
+        
+        nums1 = [1,2,3,4,5,6,7,8,9,10]
+        nums2 = [11,12]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 6.5)
+        
+        
+        nums1 = [1,2]
+        nums2 = [3,4,5,6,7,8,9,10,11,12]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 6.5)
+        
+        nums1 = [1,2,3,4,5,6,7,8,9,10]
+        nums2 = [8,12]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 6.5)
+        
+        nums1 = [1,2,3,4,5,6,7,8,9,10]
+        nums2 = [8]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 6)
+        
+        nums1 = [8]
+        nums2 = [8]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 8)
+        
+        nums1 = [7]
+        nums2 = [8]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 7.5)
+        
+        nums1 = [0]
+        nums2 = [8]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 4)
+        
+        nums1 = [0]
+        nums2 = [0]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 0)
+        
+        nums1 = [1,2]
+        nums2 = [1,2]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 1.5)
+        
+        nums1 = [1,3]
+        nums2 = [2,4]
+        solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        XCTAssertEqual(solution, 2.5)
+    }
+    
+    
+    func testSubsets() {
+        var nums = [Int]()
+        var solution = [[Int]]()
+        var expected = [[Int]]()
+        
+        nums = [1,2,3]
+        expected = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+
+        solution = Subsets.Solution().subsets(nums)
+
+        
+        XCTAssertEqual(solution, expected)
+        
+    }
+    
+    func testCombinations() {
+        var n: Int
+        var k: Int
+        var solution = [[Int]]()
+        var expected = [[Int]]()
+        
+        n = 4
+        k = 2
+        expected = [[1, 2], [1, 3], [2, 3], [1, 4], [2, 4], [3, 4]]
+        solution = Combinations.Solution().combine(n, k)
+        XCTAssertEqual(solution, expected)
+        
+        n = 4
+        k = 1
+        expected = [[1],[2],[3],[4]]
+        solution = Combinations.Solution().combine(n, k)
+        XCTAssertEqual(solution, expected)
+        
+        n = 100
+        k = 0
+        expected = [[]]
+        solution = Combinations.Solution().combine(n, k)
+        XCTAssertEqual(solution, expected)
+        
+        n = 3
+        k = 5
+        expected = []
+        solution = Combinations.Solution().combine(n, k)
+        XCTAssertEqual(solution, expected)
+        
+    }
+    
+    func testPowerOfTwo() {
+        var n: Int
+        var res: Bool
+        var expected: Bool
+        
+        expected = true
+        n = 16
+        res = PowerOfTwo.Solution().isPowerOfTwo(n)
+        XCTAssertEqual(expected, res)
+        
+        expected = true
+        n = 1
+        res = PowerOfTwo.Solution().isPowerOfTwo(n)
+        XCTAssertEqual(expected, res)
+        
+        
+    }
 }

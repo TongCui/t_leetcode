@@ -18,13 +18,13 @@ class ViewController: UIViewController {
     
     
     func test() {
-        let a = [[1], [1]]
-        let b = [[2], [2], [2]]
+        let nums1 = [1,3]
+        let nums2 = [2]
         
-        zip(a, b).forEach { (left, right) in
-            print(left)
-            print(right)
-        }
+        let solution = MedianOfTwoSortedArrays.Solution().findMedianSortedArrays(nums1, nums2)
+        
+        print(solution)
+        
     }
     
     

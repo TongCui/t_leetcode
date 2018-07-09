@@ -45,6 +45,21 @@ class TwoSum {
             
             return []
         }
+        
+        func twoSum1(_ nums: [Int], _ target: Int) -> [Int] {
+            var map:[Int:Int] = [:]
+            
+            for idx in (0..<nums.endIndex) {
+                let num = nums[idx]
+                if let targetIdx = map[target - num] {
+                    return [targetIdx, idx]
+                }
+                
+                map[num] = idx
+            }
+            
+            return nums
+        }
     }
     
 }
