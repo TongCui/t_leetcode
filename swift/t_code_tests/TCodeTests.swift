@@ -859,4 +859,21 @@ class TCodeTests: XCTestCase {
         
         
     }
+    
+    func testRestoreIPAddresses() {
+        var str: String
+        var res: [String]
+        var expected: [String]
+        
+        str = "25525511135"
+        res = RestoreIPAddresses.Solution().restoreIpAddresses(str)
+        expected = ["255.255.11.135","255.255.111.35"]
+        XCTAssertEqual(res, expected)
+        
+        
+        str = "010010"
+        res = RestoreIPAddresses.Solution().restoreIpAddresses(str)
+        expected = ["0.10.0.10","0.100.1.0"]
+        XCTAssertEqual(res, expected)
+    }
 }

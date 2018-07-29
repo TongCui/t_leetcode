@@ -63,7 +63,7 @@ class Combinations {
         }
         
         func combine2(_ n: Int, _ k: Int) -> [[Int]] {
-            var nums = [Int]()
+            let nums = [Int]()
             var result = [[Int]]()
             recurse(n: n, k: k, current: nums, result: &result)
             return result

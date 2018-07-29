@@ -56,6 +56,8 @@
 		E54F6B6020F34392001D31B3 /* Combinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F6B5F20F34392001D31B3 /* Combinations.swift */; };
 		E54F6B6220F35F4F001D31B3 /* ContainsDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F6B6120F35F4F001D31B3 /* ContainsDuplicate.swift */; };
 		E54F6B6420F36144001D31B3 /* PowerOfTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F6B6320F36144001D31B3 /* PowerOfTwo.swift */; };
+		E54F6B6620F59F1F001D31B3 /* WordSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F6B6520F59F1F001D31B3 /* WordSearch.swift */; };
+		E5822DFB210C86E600652818 /* RestoreIPAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5822DFA210C86E600652818 /* RestoreIPAddresses.swift */; };
 		E594EBFD20D9237E006E4098 /* AddTwoNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E594EBFC20D9237E006E4098 /* AddTwoNumbers.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,8 @@
 		E54F6B5F20F34392001D31B3 /* Combinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinations.swift; sourceTree = "<group>"; };
 		E54F6B6120F35F4F001D31B3 /* ContainsDuplicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsDuplicate.swift; sourceTree = "<group>"; };
 		E54F6B6320F36144001D31B3 /* PowerOfTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerOfTwo.swift; sourceTree = "<group>"; };
+		E54F6B6520F59F1F001D31B3 /* WordSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSearch.swift; sourceTree = "<group>"; };
+		E5822DFA210C86E600652818 /* RestoreIPAddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreIPAddresses.swift; sourceTree = "<group>"; };
 		E594EBFC20D9237E006E4098 /* AddTwoNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTwoNumbers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,6 +260,8 @@
 				E594EBFC20D9237E006E4098 /* AddTwoNumbers.swift */,
 				E54F6B5D20F21886001D31B3 /* Subsets.swift */,
 				E54F6B5F20F34392001D31B3 /* Combinations.swift */,
+				E54F6B6520F59F1F001D31B3 /* WordSearch.swift */,
+				E5822DFA210C86E600652818 /* RestoreIPAddresses.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 				0703B44520A964580054627C /* ValidPalindrome.swift in Sources */,
 				0703B43520A449460054627C /* PathSum.swift in Sources */,
 				0748249020D2466F00BFAF8A /* array-slice-min.swift in Sources */,
+				E5822DFB210C86E600652818 /* RestoreIPAddresses.swift in Sources */,
 				0703B43920A5351C0054627C /* BalancedBinaryTree.swift in Sources */,
+				E54F6B6620F59F1F001D31B3 /* WordSearch.swift in Sources */,
 				070003C420A0420500F3EFD1 /* TwoSum.swift in Sources */,
 				070003D120A2B9FA00F3EFD1 /* RemoveDuplicatesFromSortedArray.swift in Sources */,
 				070003C720A0492600F3EFD1 /* PalindromeNumber.swift in Sources */,
