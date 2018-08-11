@@ -802,9 +802,9 @@ class TCodeTests: XCTestCase {
         
         nums = [1,2,3]
         expected = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
-
+        
         solution = Subsets.Solution().subsets(nums)
-
+        
         
         XCTAssertEqual(solution, expected)
         
@@ -875,5 +875,19 @@ class TCodeTests: XCTestCase {
         res = RestoreIPAddresses.Solution().restoreIpAddresses(str)
         expected = ["0.10.0.10","0.100.1.0"]
         XCTAssertEqual(res, expected)
+    }
+    
+    func testTriangle() {
+        var triangle =  [
+            [2],
+            [3,4],
+            [6,5,7],
+            [4,1,8,3]
+        ]
+        
+        var res: Int
+        
+        res = Triangle.Solution().minimumTotal(triangle)
+        XCTAssertEqual(res, 11)
     }
 }
